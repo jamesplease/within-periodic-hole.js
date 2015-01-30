@@ -1,0 +1,7 @@
+{
+  "destinationFolder": "dist",
+  "exportFileName": "within-periodic-hole",
+  "entryFileName": "within-periodic-hole",
+  "exportVarName": "withinPeriodicHole",
+  "mochaGlobals": ["stub", "spy", "expect", "nearestPeriodicValue"]
+}

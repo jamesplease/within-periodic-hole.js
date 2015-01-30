@@ -1,0 +1,34 @@
+{
+  "name": "within-periodic-hole.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jmeas/within-periodic-hole.js",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "Determine if a point is inside of a periodic hole.",
+  "main": "dist/within-periodic-hole.js",
+  "keywords": [
+    "mathematics",
+    "math",
+    "period",
+    "periodic",
+    "contained",
+    "within",
+    "numbers",
+    "hole",
+    "holes"
+    "solution",
+    "function"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nearest-periodic-value.js": "~1.0.0"
+  }
+}
