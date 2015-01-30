@@ -11,10 +11,9 @@ function withinPeriodicHole(point, holeDefinition) {
     nearest = nearest - holePeriod - holeLength;
   }
 
-  var holeStart = nearest;
-  var holeEnd = nearest + holeLength;
-
-  return holeStart <= point && holeEnd > point;
+  // Determine if we're inside the hole by comparing the start
+  // and end of the hole against our point
+  return nearest <= point && (nearest + holeLength) > point;
 }
 
 export default withinPeriodicHole;
