@@ -3,5 +3,5 @@
   "exportFileName": "within-periodic-hole",
   "entryFileName": "within-periodic-hole",
   "exportVarName": "withinPeriodicHole",
-  "mochaGlobals": ["stub", "spy", "expect", "withinPeriodicHole"]
+  "mochaGlobals": ["stub", "spy", "expect", "nearestPeriodicValue"]
 }

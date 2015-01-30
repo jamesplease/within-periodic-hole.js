@@ -1,34 +1,20 @@
 import nearestPeriodicValue from 'nearest-periodic-value';
 
-function skippedHoles(point, holeDefinition) {
-  return nearestPeriodicValue + point + holeDefinition;
-  // var period = holeDefinition.period;
-  // var value = holeDefinition.holeStart;
-  // // var holeLength = holeDefinition.length;
-  // var nearest = nearestPeriodicValue(start, value, period);
+function withinPeriodicHole(point, holeDefinition) {
+  var holePeriod = holeDefinition.period;
+  var holeValue = holeDefinition.startValue;
+  var holeLength = holeDefinition.length;
+  var nearest = nearestPeriodicValue(point, holeValue, holePeriod+holeLength);
 
-  // // Make the algorithm inclusive. If the distance is 0 and we're
-  // // on the nearest value, then we don't count it.
-  // if (nearest === start && distance === 0) {
-  //   return 0;
-  // }
+  // If the nearest is ahead of you, then move it back one period.
+  if (nearest - point > 0) {
+    nearest = nearest - holePeriod - holeLength;
+  }
 
-  // // If our nearest value is behind the start, or is the start,
-  // // then push it to the next value
-  // if (nearest - start < 0) {
-  //   nearest = nearest + period;
-  // }
+  var holeStart = nearest;
+  var holeEnd = nearest + holeLength;
 
-  // // No values were skipped if the nearest is shorter than the distance
-  // if (nearest - start > distance) {
-  //   return 0;
-  // }
-
-  // else {
-  //   // Determine how many 'skipped intervals' there were. Skipped intervals can be
-  //   // thought of a period-1 function, as they do not contribute to the total value.
-  //   return 1 + parseInt((distance-nearest) / (period-1));
-  // }
+  return holeStart <= point && holeEnd > point;
 }
 
-export default skippedHoles;
+export default withinPeriodicHole;

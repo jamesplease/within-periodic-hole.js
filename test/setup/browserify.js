@@ -1,7 +1,8 @@
 var setup = require('./setup');
 var config = require('../../config');
 global._ = require('underscore');
-require('../fixtures/solutions');
+require('../fixtures/holes');
+require('../fixtures/balanced-solutions');
 
 global[config.exportVarName] = require('../../tmp/__entry');
 global.mocha.setup('bdd');

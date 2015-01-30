@@ -57,6 +57,6 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
-    "nearest-periodic-value": "^1.0.0"
+    "nearest-periodic-value": "^1.1.0"
   }
 }

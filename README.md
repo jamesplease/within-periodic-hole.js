@@ -11,7 +11,7 @@ Determine if a point is inside of a periodic hole.
 
 A hole is a piece of a function that does not exist. Consider the following number line:
 
-`1 2 3 _ _ _ 7 8 9 _ _ _ 13 14 15`
+`0 1 2 _ _ _ 6 7 8 _ _ _ 12 13 14`
 
 This is a function with a peridic hole of length 3 with period 3.
 
@@ -27,7 +27,7 @@ To define the hole in the above example, the following definition would be used:
 {
   length: 3,
   period: 3,
-  startValue: 4
+  startValue: 3
 }
 ```
 
