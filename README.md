@@ -9,11 +9,11 @@ Determine if a point is inside of a periodic hole.
 
 ### Terminology
 
-A hole is a piece of a function that does not exist. Consider the following number line:
+A hole is a piece of a function that does not exist. Consider the following function:
 
 `0 1 2 _ _ _ 6 7 8 _ _ _ 12 13 14`
 
-This is a function with a peridic hole of length 3 with period 3.
+This is a function with a hole of length 3 and period 3.
 
 A periodic hole is defined by three properties:
 
