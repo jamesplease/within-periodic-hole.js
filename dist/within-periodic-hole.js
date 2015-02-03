@@ -1,16 +1,9 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["nearest-periodic-value"], factory);
-  } else if (typeof exports !== "undefined") {
-    var nearestPeriodicValue = require("nearest-periodic-value");
-    module.exports = factory(nearestPeriodicValue);
-  } else {
-    root.withinPeriodicHole = factory(root.nearestPeriodicValue);
-  }
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory(require("nearest-periodic-value")) : typeof define === "function" && define.amd ? define(["nearest-periodic-value"], factory) : global.withinPeriodicHole = factory(global.nearestPeriodicValue);
 })(this, function (nearestPeriodicValue) {
   "use strict";
 
-  var withinPeriodicHole = function (point, holeDefinition) {
+  function withinPeriodicHole(point, holeDefinition) {
     var holePeriod = holeDefinition.period;
     var holeValue = holeDefinition.startValue;
     var holeLength = holeDefinition.length;
@@ -24,11 +17,10 @@
     // Determine if we're inside the hole by comparing the start
     // and end of the hole against our point
     return nearest <= point && nearest + holeLength > point;
-  };
+  }
 
+  var within_periodic_hole = withinPeriodicHole;
 
-
-
-  return withinPeriodicHole;
+  return within_periodic_hole;
 });
-//# sourceMappingURL=within-periodic-hole.js.map
+//# sourceMappingURL=./within-periodic-hole.js.map
